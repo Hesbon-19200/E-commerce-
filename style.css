@@ -1,0 +1,603 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  background: black;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #8e44ad;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.animated-brand {
+  display: inline-block;
+  padding: 20px;
+  background: dodgerblue;
+  border-radius: 10px;
+  animation: colorChange 20s infinite;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.location {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: white;
+}
+
+.tagline {
+  font-style: italic;
+  color: cadetblue;
+  margin-top: 5px;
+}
+
+/* Navigation Bar */
+.navbar {
+  background: yellow;
+  border-bottom: 2px solid #8e44ad;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #8e44ad;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-left: 0px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: blue;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #8e44ad;
+}
+
+/* Hamburger Menu */
+.menu-icon {
+  font-size: 28px;
+  color: aqua;
+  cursor: pointer;
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+  }
+
+  #menu-toggle:checked + .menu-icon + .logo + .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 10px 20px;
+  }
+}
+
+/* Products Grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.product {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.03);
+}
+
+.product img {
+  width: 80%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* WhatsApp Button */
+.product a {
+  display: inline-block;
+  margin-top: 10px;
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.product a:hover {
+  background: #128c7e;
+}
+
+/* View More Button */
+.view-more {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-more-btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background: #333;
+}
+
+.more-products {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid #ccc;
+}
+
+/* Testimonials */
+#testimonials {
+  background: #eee;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+#testimonials h2 {
+  margin-bottom: 20px;
+  color: #8e44ad;
+}
+
+#testimonials blockquote {
+  font-style: italic;
+  margin: 10px auto;
+  max-width: 600px;
+  color: #555;
+}
+
+/* Countdown */
+.countdown {
+  background: #fff6f6;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.countdown h2 {
+  color: #c0392b;
+  margin-bottom: 15px;
+}
+
+.timer-box span {
+  display: inline-block;
+  background: #e74c3c;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin: 5px;
+  font-weight: bold;
+}
+
+/* Style Tips */
+.style-tips {
+  padding: 30px 20px;
+  background: #f9f9f9;
+}
+
+.style-tips h2 {
+  text-align: center;
+  color: #8e44ad;
+  margin-bottom: 20px;
+}
+
+.tip-card {
+  background: #fff;
+  border-left: 5px solid #8e44ad;
+  padding: 15px;
+  margin: 10px auto;
+  width: 90%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* About */
+.about {
+  background: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  color: #8e44ad;
+  margin-bottom: 15px;
+}
+
+.about p {
+  max-width: 600px;
+  margin: auto;
+  color: #444;
+}
+
+/* FAQ */
+.faq {
+  padding: 30px 20px;
+  background: #fafafa;
+}
+
+.faq h2 {
+  color: #8e44ad;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.question {
+  background: #fff;
+  padding: 15px;
+  margin: 10px auto;
+  max-width: 700px;
+  border-left: 4px solid #8e44ad;
+  box-shadow: 0 0 4px rgba(0,0,0,0.05);
+}
+
+/* Catalog Download */
+.catalog {
+  text-align: center;
+  padding: 30px 20px;
+  background: #fdfdfd;
+}
+
+.catalog h2 {
+  color: #8e44ad;
+  margin-bottom: 10px;
+}
+
+.catalog-btn {
+  background: #8e44ad;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.catalog-btn:hover {
+  background: #6c3483;
+}
+
+/* Contact */
+#contact {
+  padding: 30px 20px;
+  text-align: center;
+  background: #f0f0f0;
+}
+
+#contact h2 {
+  margin-bottom: 15px;
+  color: #8e44ad;
+}
+
+.back-home {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #8e44ad;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: #ddd;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Floating WhatsApp Icon */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background 0.3s;
+}
+
+.whatsapp-float:hover {
+  background: #128c7e;
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Floating Call Button */
+.call-float {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  background: #27ae60;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Fade-in Animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Brand Color Change Animation */
+@keyframes colorChange {
+  0% { background-color: red; }
+  20% { background-color: orange; }
+  40% { background-color: yellow; }
+  60% { background-color: green; }
+  80% { background-color: blue; }
+  100% { background-color: violet; }
+}
+/* === THEME VARIABLES === */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --nav-bg: #f9f9f9;
+  --product-bg: #f2f2f2;
+  --button-bg: #ff7a00;
+  --button-text: #ffffff;
+}
+
+/* === APPLY VARIABLES === */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  background-color: var(--nav-bg);
+}
+
+.product {
+  background-color: var(--product-bg);
+}
+
+a {
+  color: var(--button-bg);
+}
+
+/* === TOGGLE BUTTON STYLES === */
+.theme-toggle-label {
+  position: fixed;
+  top: 45px;
+  left: 0px;
+  background: #ddd;
+  color: #000;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#dark-mode-toggle {
+  display: none;
+}
+
+/* === DARK MODE OVERRIDES === */
+#dark-mode-toggle:checked ~ * {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --nav-bg: #1e1e1e;
+  --product-bg: #2a2a2a;
+  --button-bg: #ffa500;
+  --button-text: #000000;
+}
+/*.animated-brand {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; letter-spacing: normal; }
+  50% { opacity: 0.7; letter-spacing: 2px; }
+  100% { opacity: 1; letter-spacing: normal; }
+}*/
+/* === Dark Mode Toggle === */
+#dark-mode-toggle {
+  display: none;
+}
+
+.theme-toggle-label {
+  position: fixed;
+  top: 45px;
+  left: 15px;
+  background: #222;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 2000;
+  font-size: 14px;
+}
+
+#dark-mode-toggle:checked ~ * {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+#dark-mode-toggle:checked ~ nav,
+#dark-mode-toggle:checked ~ footer {
+  background-color: #1e1e1e;
+}
+
+#dark-mode-toggle:checked ~ nav a,
+#dark-mode-toggle:checked ~ footer {
+  color: #fff;
+}
+
+/* === Gallery Section === */
+.gallery {
+  padding: 40px 10px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* === Reviews === */
+.reviews {
+  padding: 30px 10px;
+  background: #f0f0f0;
+  text-align: center;
+}
+
+.review {
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* === Shipping Policy === */
+.policy {
+  padding: 30px 10px;
+  background: #fffaf0;
+  text-align: center;
+}
+
+.policy p {
+  margin: 10px 0;
+}
+
+/* === Contact Form === */
+.contact-form {
+  background: #f9f9f9;
+  padding: 40px 10px;
+  text-align: center;
+}
+
+.contact-form form {
+  max-width: 350px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px;
+  background: var(--orange);
+  color: blue;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: var(--red);
+}
+
+/* === Social Media Links === */
+.social-links {
+  padding: 20px;
+  text-align: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: var(--accent);
+  font-weight: bold;
+}
