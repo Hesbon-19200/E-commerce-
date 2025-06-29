@@ -589,6 +589,29 @@ a {
 .contact-form button:hover {
   background: var(--red);
 }
+.blog-post {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.blog-post h3 {
+  margin-top: 20px;
+  color: #ff6600;
+}
+.blog-post ul {
+  margin-left: 20px;
+}
+.blog-author {
+  text-align: center;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #555;
+}
 
 /* === Social Media Links === */
 .social-links {
